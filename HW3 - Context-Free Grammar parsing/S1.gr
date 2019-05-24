@@ -1,0 +1,193 @@
+# The start symbol is TOP.
+
+# These two rules are required; choose their weights carefully!
+99  TOP  S1
+1   TOP  S2
+
+# This is a very, very, very simple grammar to get you started.
+
+1   S1   NP VP
+1   S1   NP _VP
+1   S1   NP3 _VP3
+
+1   _VP  VP Punc
+
+5   VP   VerbT Jj
+4   VP   To NP
+1   VP   To Nbar
+4   VP   IS NP
+1   VP   VP_1
+1   VP   VP_2
+
+1   VP_1   Vbar NP
+1   VP_2   Vbar NV
+
+1   Vbar   Vbd
+4   VP   To _Vb
+3   VP   To Vb
+1   VP   Md _Vb
+1   _Vb  Vb NP
+
+20  NP  Det Nbar
+10  NP  Prp$ Nbar
+
+1   NP_WDT  Wdt VP_1
+
+1   Nbar Nbar PP
+5   Nbar Jj Nbar
+3   Nbar Nbar_ns
+3   Nbar Nbar_n
+
+1  Nbar_n Noun
+1  Nbar_n Noun3
+1  Nbar_ns Nns
+
+1   PP   Prep NP
+1   PP   Prep NP3
+1   PP   Prep NV
+1   PP   To Loc
+
+1   _VP3   VP3 Punc
+1   _VP3   VP3_PP Punc
+
+1   VP3    Vbar3 NP
+1   VP3    Vbar3 NP3
+1   VP3    Vbar3 NV
+1   VP3    Vbar3 VP3_TO
+4   VP3    IS NP
+1   VP3    Md _Vb
+
+5   VP3_TO    To NP3_1
+5   VP3_TO    To NP3_3
+4   VP3_TO    To _Vb
+3   VP3_TO    To Vb
+
+1   VP3_PP   Vbar3 NPP
+
+1   Vbar3    Vbz
+1   Vbar3    Vbd
+1   Vbar3    VerbT
+
+1   NP3    NP3_1
+1   NP3    NP3_2
+
+1   NP3_1  Proper
+1   NP3_1  Det Noun3
+1   NP3_2  Prp3
+1   NP3_3  NP3_1   NP_WDT
+
+1   NPP NP3 PP
+1   NPP NP PP
+
+1   NV   Wdt Nbar
+
+1   Vpp   Vb Vbn
+
+# -----------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------
+
+1	NP			Loc
+1	NP			Special
+
+1	Nbar		Noun3
+
+# Rules needed for questions
+1	S1			Question _?
+
+1	DOphrase	DOP Nouns
+1	DOphrase	DOS NP
+1	DOphrase	DOS Loc
+1	DOphrase	DOS Special
+
+1	Special		Det HGrail
+1	Special		Det RTable
+
+# Rules for What/Who questions
+1	Question	Wp WpStart
+
+1	WpStart		DOphrase WpEnd
+
+1	WpEnd		Vb
+
+# Rules for When/Where/How/Why questions
+1	Question	Wrb WrbStart
+
+1	WrbStart	DOphrase Wrb_Q
+
+1	Wrb_Q		Vb
+1	Wrb_Q		Vb PronounEnd
+1	Wrb_Q		Vb NP
+1	Wrb_Q		Vb Nouns
+
+1	PronounEnd	PrpO
+1	PronounEnd	Prep PrpO
+
+# Rules for questions starting with Do/Does
+1	Question 	WrbStart
+
+# Rules for questions starting with is/are
+1	Question 	Subject Action
+
+1	Subject		IS NP
+1	Subject		ARE Nouns
+
+1	Action		Vbg NP
+
+# Rules for gerunds
+1	S1			Gerund ISphrase
+
+10	Gerund 		Vbg
+10	Gerund 		Vbg PP
+10	Gerund 		Vbg ToPhrase
+10	Gerund 		Vbg PPS
+1	Gerund 		Rb Gerund
+
+1	ToPhrase	To Loc
+1	PPS			Prep Nouns
+1	PPS			Prep PrpO
+
+1	ISphrase	IS JjEND
+
+1	JjEND		Jj Punc
+
+# Plural noun rules
+15	Nouns		Nns
+1	Nouns		Cd Nns
+1	Nouns		Jj Nns
+
+# Rule for "The coconut/coconuts is/are near/with Camelot.
+1	S1			Nouns PluralPrep
+1	S1			NP SinglePrep
+
+1	PluralPrep	ARE PrepEnd
+1	PluralPrep 	ARE PresPart
+
+1	SinglePrep	IS PrepEnd
+1	SinglePrep 	IS PresPart
+
+1	PresPart 	Vbg PrepEnd
+1	PrepEnd		PrepOpt Punc
+
+1	PrepOpt		Prep Special
+1	PrepOpt 	Prep NP
+1	PrepOpt		Prep Nouns
+1	PrepOpt		Prep Loc
+
+# Rules for Modals
+1	S1			ModSt Punc
+
+1	ModSt 		NP Mod
+1	ModSt		Nouns Mod
+
+1	Mod 		Md Vb
+1	Mod 		Mod PP
+1	Mod 		Mod Wrb_Q
+
+# in case you use S1.gr by itself
+1   S2   Misc
+
+1   S1   Imp
+
+1   Imp  Vb NP
+1   Imp  Vb PP

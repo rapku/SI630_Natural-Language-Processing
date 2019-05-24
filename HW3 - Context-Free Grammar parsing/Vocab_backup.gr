@@ -1,0 +1,517 @@
+# This is a hand-generated set of preterminal rules.
+# It specifies a simple tag set which will be handled by the S2
+# grammar and which can (though doesn't necessarily need to be)
+# handled by the S1 grammar.
+#
+# The weights given here may be changed, but no new vocabulary
+# items are to be added.
+
+# Miscellaneous items that don't fit into any of our simple tags are
+# given to Misc.  You will want to develop your own tags for these!
+
+# Punctuations
+1   Punc    .
+
+# Singular and mass nouns.  Notice that only the
+# ones that start with consonants get our Noun tag.
+1    Noun    castle
+1    Noun    king
+1    Noun    defeater
+1    Noun    sovereign
+1    Noun    servant
+1    Noun    corner
+1    Noun    land
+1    Noun    quest
+1    Noun    chalice
+1    Noun    master
+1    Noun    horse
+1    Noun    fruit
+1    Noun    swallow
+1    Noun    sun
+1    Noun    winter
+1    Noun    coconut
+1    Noun    pound
+1    Noun    husk
+1    Noun    home
+1    Noun    weight
+1    Noun    story
+
+# Determiners.
+1    Det    a
+1    Det    another
+1    Det    any
+1    Det    each
+1    Det    every
+1    Det    no
+1    Det    that
+1    Det    the
+1    Det    this
+
+# Prepositions.
+1    Prep    above
+1    Prep    across
+1    Prep    at
+1    Prep    below
+1    Prep    by
+1    Prep    for
+1    Prep    from
+1    Prep    into
+1    Prep    near
+1    Prep    of
+1    Prep    on
+1    Prep    over
+1    Prep    through
+1    Prep    with
+
+# Proper nouns.  Note that our Proper tag is just for people.
+1    Proper    Arthur
+1    Proper    Guinevere
+1    Proper    _Sir _Lancelot
+1    Proper    _Sir _Bedevere
+1    Proper    _Sir _Knight
+1    Proper    Zoot
+1    Proper    Dingo
+1    Proper    Patsy
+1    Proper    _Uther _Pendragon
+1    _Sir      Sir
+1    _Lancelot Lancelot
+1    _Bedevere Bedevere
+1    _Uther    Uther
+1    _Pendragon Pendragon
+1    _Knight   Knight
+
+# Verbs (third person singular present).
+# Note that only transitive verbs get our VerbT tag,
+# and some of those could also function as intransitives!
+1    VerbT    has
+1    VerbT    covers
+1    VerbT    is
+1    VerbT    drinks
+1    VerbT    carries
+1    VerbT    rides
+
+# End-of-sentence.
+1    Misc    !
+1    Misc    .
+1    Misc    ?
+
+# Pauses.
+1    Pause    ,
+1    Misc    ...
+1    Misc    --
+1    Misc    ;
+1    Misc    :
+
+# Coordinating conjunctions.
+1    Cc    and
+1    Cc    but
+1    Cc    or
+1    Cc    either
+1    Cc    nor
+1    Cc    neither
+1    Cc    so
+
+# Numbers.
+1    Cd    eight
+1    Cd    five
+1    Cd    one
+1    Cd    5.5
+1    Cd    sixty
+1    Cd    5,000
+
+# Expletive.
+1    Misc    there
+
+# Subordinating conjunctions.
+1    Misc    that
+1    Misc    so
+1    Misc    while
+1    Misc    because
+1    Misc    if
+
+# Modals.
+1    Md    can
+1    Md    could
+1    Md    may
+1    Md    might
+1    Md    must
+1    Md    ought
+1    Md    shall
+1    Md    should
+1    Md    will
+1    Md    would
+
+
+# Adjectives.
+1    Jj    bloody
+1    Jj    weary
+1    Jj    unable
+1    Jj    trusty
+1    Jj    further
+1    Jj    sacred
+1    Jj    tropical
+1    Jj    indigenous
+1    Jj    temperate
+1    Jj    hot
+1    Jj    lucky
+1    Jj    simple
+1    Jj    tiny
+1    Jj    hard
+1    Jj    sensational
+1    Jj    comparable
+1    Jj    angolian
+1    Jj    yellow
+1    Jj    plodding
+
+# Comparative adjectives.
+1    Misc    bloodier
+1    Misc    wearier
+1    Misc    trustier
+1    Misc    hotter
+1    Misc    simpler
+1    Misc    tinier
+1    Misc    harder
+
+# Superlative adjectives.
+1    Misc    bloodiest
+1    Misc    weariest
+1    Misc    trustiest
+1    Misc    hottest
+1    Misc    simplest
+1    Misc    tiniest
+1    Misc    hardest
+
+# Plural nouns.
+1    Nns    coconuts
+1    Nns    halves
+1    Nns    snows
+1    Nns    mountains
+1    Nns    areas
+1    Nns    strangers
+1    Nns    inches
+1    Nns    snakes
+1    Nns    ants
+1    Nns    nights
+
+# More proper nouns, not people.
+
+1    Misc    Camelot
+1    Misc    England
+1    Misc    _Holy _Grail
+1    _Holy   Holy
+1    _Grail  Grail
+1    Misc    _Round _Table
+1    _Round  Round
+1    _Table  Table
+
+# Plural proper nouns.
+1    Misc    Britons
+1    Misc    Saxons
+
+# Personal pronouns.
+1    Prp    I
+1    Prp    her
+1    Prp    him
+1    Prp    them
+1    Prp    they
+
+1    Prp3    he
+1    Prp3    she
+1    Prp3    it
+1    Prp3    one
+
+
+# Possessive personal pronouns
+1    Prp$    her
+1    Prp$    his
+1    Prp$    its
+1    Prp$    their
+
+# Adverbs.
+1    Rb    again
+1    Rb    already
+1    Rb    currently
+1    Rb    frequently
+1    Rb    precisely
+1    Rb    south
+1    Rb    successfully
+1    Rb    unfortunately
+
+# 'do'/'does'
+1    Misc    do
+1    Misc    does
+
+# 'to'
+1    To    to
+
+# 'not'
+1    Misc    not
+
+# Verbs (base form).
+1    Vb    have
+1    Vb    speak
+1    Vb    cover
+1    Vb    be
+1    Vb    ride
+1    Vb    drink
+1    Vb    grow
+1    Vb    carry
+1    Vb    suggest
+1    Vb    migrate
+1    Vb    know
+
+# Verbs (past tense).
+1    Vbd    had
+1    Vbd    spoke
+1    Vbd    covered
+1    Vbd    was
+1    Vbd    were
+1    Vbd    rode
+1    Vbd    drank
+1    Vbd    grew
+1    Vbd    carried
+1    Vbd    suggested
+1    Vbd    migrated
+1    Vbd    knew
+
+# Verbs (present participles).
+1    Vbg    having
+1    Vbg    speaking
+1    Vbg    covering
+1    Vbg    being
+1    Vbg    riding
+1    Vbg    drinking
+1    Vbg    growing
+1    Vbg    carrying
+1    Vbg    suggesting
+1    Vbg    migrating
+1    Vbg    knowing
+
+# Verbs (past participle).
+1    Vbn    had
+1    Vbn    spoken
+1    Vbn    covered
+1    Vbn    been
+1    Vbn    ridden
+1    Vbn    drunk
+1    Vbn    grown
+1    Vbn    carried
+1    Vbn    suggested
+1    Vbn    migrated
+1    Vbn    known
+
+# More third person singular verbs.
+1    Vbz    speaks
+1    Vbz    grows
+1    Vbz    goes
+1    Vbz    migrates
+1    Vbz    suggests
+1    Vbz    knows
+
+# Verbs (present, plural, third person).
+1    Vb    have
+1    Vb    speak
+1    Vb    cover
+1    Vb    are
+1    Vb    ride
+1    Vb    drink
+1    Vb    grow
+1    Vb    carry
+1    Vb    suggest
+1    Vb    migrate
+1    Vb    know
+
+# Wh-determiners.
+1    Wdt    that
+1    Wdt    what
+1    Wdt    which
+
+# Wh-pronouns.
+1    Wp    what
+1    Wp    who
+
+# Wh possessive pronoun.
+1    Misc    whose
+
+# Wh-adverbs
+1    Wrb    how
+1    Wrb    when
+1    Wrb    where
+1    Wrb    why
+
+
+# Possessive marker.
+1    Misc    's
+
+# Some additional words from Monty Python
+1    Misc    pull
+1    Misc    other
+1    Misc    you
+1    Misc    'm
+1    Misc    dead
+1    Misc    you
+1    Misc    're
+1    Misc    fooling
+1    Misc    anyone
+1    Misc    y'
+1    Misc    feel
+1    Misc    happy
+1    Misc    feel
+1    Misc    happy
+1    Misc    'm
+1    Misc    thirty
+1    Misc    seven
+1    Misc    'm
+1    Misc    old
+1    Misc    you
+1    Misc    're
+1    Misc    fooling
+1    Misc    yourself
+1    Misc    we
+1    Misc    're
+1    Misc    living
+1    Misc    in
+1    Misc    dictatorship
+1    Misc    we
+1    Misc    're
+1    Misc    an
+1    Misc    anarcho-syndicalist
+1    Misc    commune
+1    Misc    all
+1    Misc    decisions
+1    Misc    officer
+1    Misc    ratified
+1    Misc    special
+1    Misc    biweekly
+1    Misc    meeting
+1    Misc    order
+1    Misc    you
+1    Misc    quiet
+1    Misc    well
+1    Misc    'ow
+1    Misc    did
+1    Misc    you
+1    Misc    become
+1    Misc    then
+1    Misc    am
+1    Misc    your
+1    Misc    mean
+1    Misc    went
+1    Misc    around
+1    Misc    sayin'
+1    Misc    an
+1    Misc    emperor
+1    Misc    just
+1    Misc    some
+1    Misc    moistened
+1    Misc    bink
+1    Misc    lobbed
+1    Misc    scimitar
+1    Misc    me
+1    Misc    'd
+1    Misc    put
+1    Misc    me
+1    Misc    away
+1    Misc    now
+1    Misc    we
+1    Misc    see
+1    Misc    violence
+1    Misc    inherent
+1    Misc    in
+1    Misc    system
+1    Misc    oh
+1    Misc    come
+1    Misc    see
+1    Misc    violence
+1    Misc    inherent
+1    Misc    in
+1    Misc    system
+1    Misc    help
+1    Misc    'm
+1    Misc    repressed
+1    Misc    peasant
+1    Misc    you
+1    Misc    fight
+1    Misc    strength
+1    Misc    many
+1    Misc    men
+1    Misc    with
+1    Misc    none
+1    Misc    pass
+1    Misc    move
+1    Misc    man
+1    Misc    come
+1    Misc    you
+1    Misc    pansy
+1    Misc    victory
+1    Misc    mine
+1    Misc    you
+1    Misc    going
+1    Misc    bleed
+1    Misc    me
+1    Misc    you
+1    Misc    're
+1    Misc    loony
+1    Misc    all
+1    Misc    right
+1    Misc    we
+1    Misc    'll
+1    Misc    call
+1    Misc    draw
+1    Misc    'll
+1    Misc    bite
+1    Misc    your
+1    Misc    legs
+1    Misc    off
+1    Misc    we
+1    Misc    found
+1    Misc    witch
+1    Misc    we
+1    Misc    burn
+1    Misc    'm
+1    Misc    witch
+1    Misc    well
+1    Misc    second
+1    Misc    thought
+1    Misc    let
+1    Misc    go
+1    Misc    silly
+1    Misc    place
+1    Misc    King
+1    Misc    your
+1    Misc    purpose
+1    Misc    Quest
+1    Misc    go
+1    Misc    tell
+1    Misc    your
+1    Misc    we
+1    Misc    charged
+1    Misc    God
+1    Misc    blow
+1    Misc    my
+1    Misc    nose
+1    Misc    you
+1    Misc    so-called
+1    Misc    Arthur-king
+1    Misc    you
+1    Misc    all
+1    Misc    your
+1    Misc    silly
+1    Misc    English
+1    Misc    knnnniggets
+1    Misc    thppppt
+1    Misc    strange
+1    Misc    person
+1    Misc    now
+1    Misc    go
+1    Misc    away
+1    Misc    taunt
+1    Misc    you
+1    Misc    second
+1    Misc    time-a
+1    Misc    ah
+1    Misc    your
+1    Misc    mother
+1    Misc    run
+1    Misc    away
+
